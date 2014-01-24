@@ -9,6 +9,10 @@ echo 5. system properties
 echo 6. windows firewall
 echo 7. game controllers
 echo 8. screen resolution
+echo 9. date and time
+echo 10. mouse properties
+echo 11. sound
+echo 12. action center
 echo.
 set /p choice=choice: 
 cls
@@ -18,7 +22,7 @@ panel.bat
 :1
 set file=input.dll
 goto exit
-:2
+echo 11. sound
 rem international
 rem /name Microsoft.RegionalAndLanguageOptions
 set file=intl.cpl
@@ -45,5 +49,17 @@ set file=joy.cpl
 goto exit
 :8
 set file=desk.cpl
+goto exit
+:9
+set file=timedate.cpl
+goto exit
+:10
+set file=main.cpl
+goto exit
+:11
+set file=mmsys.cpl
+goto exit
+:12
+set file=wscui.cpl
 :exit
 start %directory%\control.exe %directory%\%file%

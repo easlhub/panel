@@ -12,6 +12,8 @@ echo 8. certificates
 echo 9. windows firewall with advanced security
 echo 10. local users and groups
 echo 11. shared folders
+echo 12. performance manager
+echo 13. wmi control
 echo.
 set /p choice=choice: 
 cls
@@ -51,5 +53,11 @@ set file=lusrmgr.msc
 goto exit
 :11
 set file=fsmgmt.msc
+goto exit
+:12
+set file=perfmon.msc
+goto exit
+:13
+set file=wmimgmt.msc
 :exit
 start %directory%\mmc.exe %directory%\%file%
