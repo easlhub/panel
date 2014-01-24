@@ -2,8 +2,8 @@
 title panel
 set directory=%windir%\system32
 echo.
-echo 1. control panel
-echo 2. microsoft management console
+echo 1. control
+echo 2. mmc
 echo 3. utility
 echo.
 set /p choice=choice: 
